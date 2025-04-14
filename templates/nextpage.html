@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Page</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style1.css') }}">
+    </head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <span>&#9776;</span>
+    </div>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Yula</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content" >
+            <h1>Welcome to My Website</h1>
+            <p>Your success starts here. Let's make things happen.</p>
+            <button onclick="scrollToSection('#services')">Our Services</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="forum" class="forum">
+        <div id="services" class-="services">
+        <h2>Our Services</h2></div>
+        <div class="service-container">
+            <div class="service" id="page1">
+                <li><a href="nextpage1.html">Web Development
+                    Building responsive and high-quality websites.</a></li>
+               </div>
+            <div class="service" id="page2">
+                <li><a href="nextpage2.html">Graphic Design
+                    Designing visually stunning graphics for your brand.</a></li>
+            </div>
+            <div class="service" id="page3">
+                <li><a href="nextpage3.html">SEO Optimization
+                    Improving your website's ranking on search engines.</a></li>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about" >
+        <h2>About Us</h2>
+        <p>We are a team of professionals dedicated to making your vision come to life. With years of experience in web development, design, and digital marketing, we guarantee outstanding results.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+            <input type="text" name="name" placeholder="Your Name" required></input>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+    </section>
+    <form action="{{ url_for('logout') }}" method="GET">
+        <button type="submit" class="logoutBtn">Logout</button>
+    </form>
+    
+    </section>
+</body>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 MySite. All rights reserved.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/script1.js') }}"></script>
+</html>
