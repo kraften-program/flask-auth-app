@@ -140,6 +140,6 @@ def dashboard():
         return redirect(url_for('login'))
     return render_template('nextpage.html')
 
-
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    # This is not necessary anymore as gunicorn will handle it
+    app.run(host="0.0.0.0", port=5000)  # Make sure Flask listens on all interfaces
